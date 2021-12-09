@@ -15,7 +15,7 @@ server.use('/test', testRouter)
 server.use(express.json())
 /* basic route to access the application in the browser */
 server.get('/', (req, res) => {
-    res.send('<h1>This is a test application</h1>')
+    res.send('<h1>This is a test application of linda zakraoui for lab5</h1>')
 })
 /* Listen to the port in the variable and display a message */
 server.listen(port, () => {
