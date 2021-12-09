@@ -1,3 +1,5 @@
+/* import routes from route.js */
+const testRouter = require('./route')
 /* allows access to the 'environment variables' (.env file) */
 require('dotenv').config()
 /* import express and cors 2 */
@@ -8,6 +10,8 @@ const server = express()
 const port = process.env.PORT || 8000
 /* use cors and express.json (which a body-parser for incoming requests) */
 server.use(cors())
+/* tell the server to use that router and allows us to use it using ‘/test’ route */
+server.use('/test', testRouter)
 server.use(express.json())
 /* basic route to access the application in the browser */
 server.get('/', (req, res) => {
